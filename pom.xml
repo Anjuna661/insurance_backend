@@ -83,7 +83,20 @@
 		<url>http://18.219.221.230:8081/artifactory/libs-snapshot</url>
 	    </snapshotRepository>
 	</distributionManagement>
-	
+	<profiles>
+	  <profile>
+		<id>DEV</id>
+		<properties>
+			<spring.profiles.active>DEV</spring.profiles.active>
+		  </properties>  
+	  </profile>
+	  <profile>
+		<id>SIT</id>
+		<properties>
+			<spring.profiles.active>SIT</spring.profiles.active>
+		  </properties>  
+	  </profile>
+	</profiles>
 	<build>
 		<plugins>
 			<plugin>
